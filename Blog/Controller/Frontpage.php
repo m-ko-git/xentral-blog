@@ -4,6 +4,7 @@
 namespace Blog\Controller;
 
 use Blog\Template;
+use Blog\Model;
 
 /**
  * Class Frontpage
