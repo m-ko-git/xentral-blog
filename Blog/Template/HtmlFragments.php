@@ -99,7 +99,6 @@ class HtmlFragments
         return $body;
     }
 
-
     /**
      * @param $postTitle
      * @param $excerpt
