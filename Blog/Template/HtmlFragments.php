@@ -30,6 +30,7 @@ class HtmlFragments
     }
 
     /**
+     * Returns header of the Frontpage
      * @return string
      */
     public static function headerHome()
@@ -78,9 +79,8 @@ class HtmlFragments
         return $footer;
     }
 
-
     /**
-     * @param $content [string]
+     * @param $content [the content to wrap]
      * @return string
      */
     public static function wrapHtml($content)
@@ -97,5 +97,22 @@ class HtmlFragments
     {
         $body = '<body>'.$content.'</body>';
         return $body;
+    }
+
+
+    /**
+     * @param $postTitle
+     * @param $excerpt
+     * @param $date
+     * @return string
+     */
+    public static function wrapListPost($postTitle, $excerpt, $date){
+        $post =  '<div class="card-body">
+                     <div class="small text-muted">'.$date.'</div>
+                      <h2 class="card-title h4">'.$postTitle.'</h2>
+                      <p class="card-text">'.$excerpt.'</p>
+                      <a class="btn btn-primary" href="#!">Read more →</a>
+                      </div>';
+        return $post;
     }
 }
