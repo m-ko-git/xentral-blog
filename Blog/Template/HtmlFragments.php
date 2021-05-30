@@ -19,7 +19,7 @@ class HtmlFragments
                     <meta charset="utf-8">
                     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                     <meta name="description" content="">
-                    <meta name="author" content="">
+                    <meta name="author" content="Marko Grasshoff">
                     <title>Xentral Blog Task</title>
                     <!-- Favicon-->
                     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -80,6 +80,8 @@ class HtmlFragments
     }
 
     /**
+     * Wrap in <html> tags
+     *
      * @param $content [the content to wrap]
      * @return string
      */
@@ -90,6 +92,8 @@ class HtmlFragments
     }
 
     /**
+     * Wrap in <body> tags
+     *
      * @param $content [string]
      * @return string
      */
@@ -100,6 +104,8 @@ class HtmlFragments
     }
 
     /**
+     * Wrap a post for the listview
+     *
      * @param $postTitle
      * @param $excerpt
      * @param $date
