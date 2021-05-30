@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Blog\Template;
+namespace Blog\View;
 
 
 /**
  * Class HtmlFragments
  * @Description
- * @package Blog\Template
+ * @package Blog\View
  */
 class HtmlFragments
 {

@@ -3,7 +3,7 @@
 
 namespace Blog\Controller;
 
-use Blog\Template;
+use Blog\View;
 use Blog\Model;
 
 /**
@@ -20,16 +20,17 @@ class Frontpage
      */
     public static function listView()
     {
-        $header = Template\HtmlFragments::headerHome();   //HTML Header of the frontpage template
+        $allWrappedPosts='';    //all html wrapped posts
+        $header = View\HtmlFragments::headerHome();   //HTML Header of the frontpage template
         $postsSortedByDate = Model\Blogposts::getAllPosts();
         foreach($postsSortedByDate as $row){
             $title = $row['title'];
             $date = date("F j, Y, g:i a",$row['tstamp']);
             $excerpt = preg_replace( '/[^ ]*$/', '', substr( $row['text'], 0, LENGTH ) ) . ' ...';
-
+            $allWrappedPosts .= View\HtmlFragments::wrapListPost($title, $excerpt, $date);
         }
         $pagination = '';
-        $footer = '';   //HTML Footer
+        $footer = View\HtmlFragments::footer();   //HTML Footer
         $frontPage = $header.$postsSortedByDate.$pagination.$footer;
         echo ($frontPage);
     }
