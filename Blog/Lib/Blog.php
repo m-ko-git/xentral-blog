@@ -3,6 +3,8 @@
 
 namespace Blog\Lib;
 
+use Blog\Controller\Frontpage;
+
 
 /**
  * Class Blog
@@ -17,7 +19,7 @@ class Blog
      */
     public static function start()
     {
-
+        Frontpage::
     }
 
 }
