@@ -88,4 +88,14 @@ class HtmlFragments
         $html = '<!DOCTYPE html><html lang="en">'.$content.'</html>';
         return $html;
     }
+
+    /**
+     * @param $content [string]
+     * @return string
+     */
+    public static function wrapBody($content)
+    {
+        $body = '<body>'.$content.'</body>';
+        return $body;
+    }
 }
