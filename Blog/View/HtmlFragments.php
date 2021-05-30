@@ -22,9 +22,9 @@ class HtmlFragments
                     <meta name="author" content="Marko Grasshoff">
                     <title>Xentral Blog Task</title>
                     <!-- Favicon-->
-                    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+                    <link rel="icon" type="image/x-icon" href="Blog/View/assets/favicon.ico">
                     <!-- Core theme CSS (includes Bootstrap)-->
-                    <link href="css/styles.css" rel="stylesheet">
+                    <link href="Blog/View/css/styles.css" rel="stylesheet">
                 </head>';
         return $head;
     }
@@ -101,6 +101,17 @@ class HtmlFragments
     {
         $body = '<body>'.$content.'</body>';
         return $body;
+    }
+
+    public static function pageHeader(){
+        return '<header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Xentral Blog Task</h1>
+                    <p class="lead mb-0">Let\'s see how it goes...</p>
+                </div>
+            </div>
+        </header>';
     }
 
     /**

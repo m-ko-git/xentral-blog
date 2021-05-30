@@ -29,10 +29,8 @@ class Frontpage
             $excerpt = preg_replace( '/[^ ]*$/', '', substr( $row['text'], 0, LENGTH ) ) . ' ...';
             $allWrappedPosts .= View\HtmlFragments::wrapListPost($title, $excerpt, $date);
         }
-        $pagination = '';
-        $footer = View\HtmlFragments::footer();   //HTML Footer
-        $frontPage = $header.$postsSortedByDate.$pagination.$footer;
-        echo ($frontPage);
+        View\Listview::showListView($allWrappedPosts);
+
     }
 
 

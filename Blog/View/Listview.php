@@ -10,7 +10,7 @@ class Listview
     /**
      * Listview constructor.
      */
-    public function __construct($posts)
+    public static function showListView($posts)
     {
         $login = HtmlFragments::loginBox();
         $htmlOutput = '<div class="container">
@@ -51,9 +51,11 @@ class Listview
             </div>
         </div>';
 
-        $output = HtmlFragments::startHtml().$htmlOutput;
-        $bodyWrapped = HtmlFragments::wrapBody($output);
-        $htmlWrappedOutput = HtmlFragments::wrapHtml($bodyWrapped);
+        $header = HtmlFragments::startHtml();
+        $pageHeader = HtmlFragments::pageHeader();
+        $bodyWrapped = HtmlFragments::wrapBody($pageHeader.$htmlOutput);
+        $footer = HtmlFragments::footer();
+        $htmlWrappedOutput = HtmlFragments::wrapHtml($header.$bodyWrapped.$footer);
         echo($htmlWrappedOutput);
     }
 }
