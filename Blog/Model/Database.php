@@ -6,23 +6,23 @@ namespace Blog\Model;
 
 class Database extends \PDO
 {
-    private $host="";
-    private $user="";
-    private $db="";
-    private $pass="";
+    private $host="mysql5.jadedheart.de";
+    private $user="db168495_5";
+    private $db="db168495_5";
+    private $pass="Xentral2021!";
     private $conn;
 
     public function __construct()
     {
         try{
             $this->conn = new \PDO("mysql:host=".$this->host.";dbname=".$this->db,$this->user,$this->pass);
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            $this->conn->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
         }catch (\PDOException $e){
             echo("Couldn't establish connection").$e->getMessage();
         }
     }
 
-    public function select($sql, $array = array(), $fetchMode = PDO::FETCH_ASSOC)
+    public function select($sql, $array = array(), $fetchMode = \PDO::FETCH_ASSOC)
     {
         $sth = $this->prepare($sql);
         foreach ($array as $key => $value) {
