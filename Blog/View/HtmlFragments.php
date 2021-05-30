@@ -123,12 +123,14 @@ class HtmlFragments
      * @return string
      */
     public static function wrapListPost($postTitle, $excerpt, $date){
-        $post =  '<div class="card-body">
-                     <div class="small text-muted">'.$date.'</div>
+
+        $post =  '    <div class="card mb-4">
+                      <div class="card-body">
+                      <div class="small text-muted">'.$date.'</div>
                       <h2 class="card-title h4">'.$postTitle.'</h2>
                       <p class="card-text">'.$excerpt.'</p>
                       <a class="btn btn-primary" href="#!">Read more →</a>
-                      </div>';
+                      </div></div>';
         return $post;
     }
 }
