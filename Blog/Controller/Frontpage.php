@@ -3,6 +3,7 @@
 
 namespace Blog\Controller;
 
+use Blog\Template;
 
 /**
  * Class Frontpage
@@ -18,11 +19,13 @@ class Frontpage
      */
     public static function listView()
     {
-        $header = '';   //HTML Header of the frontpage template
+        $header = Template\HtmlFragments::headerHome();   //HTML Header of the frontpage template
         $postsSortedByDate = '';
         $pagination = '';
         $footer = '';   //HTML Footer
         $frontPage = $header.$postsSortedByDate.$pagination.$footer;
         echo ($frontPage);
     }
+
+
 }
