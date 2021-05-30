@@ -3,11 +3,10 @@
 
 namespace Blog\Model;
 
-define('DB_TYPE', 'mysql');
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'my_db');
-define('DB_USER', 'root');
-define('DB_PASS', 'password');
+define('DB_HOST', 'mysql5.jadedheart.de');
+define('DB_NAME', 'db168495_5');
+define('DB_USER', 'db168495_5');
+define('DB_PASS', 'Xentral2021!');
 define('LENGTH',(int)25);   //How many chars
 
 class Blogposts
@@ -20,7 +19,7 @@ class Blogposts
      */
     public static function getAllPosts(){
         //DB COnnection
-        $db = new Database(DB_TYPE, DB_HOST, DB_NAME, DB_USER, DB_PASS);
+        $db = new Database(DB_HOST, DB_NAME, DB_USER, DB_PASS);
         //fetch all posts
         $res = $db->select("SELECT * from blogposts WHERE deleted=0 ORDER by tstamp");
         foreach($res as $row){
