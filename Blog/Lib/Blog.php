@@ -19,7 +19,7 @@ class Blog
      */
     public static function start()
     {
-        Frontpage::
+        Frontpage::listView();
     }
 
 }
