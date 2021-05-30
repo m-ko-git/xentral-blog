@@ -6,12 +6,11 @@ namespace Blog\Template;
 
 /**
  * Class HtmlFragments
+ * @Description
  * @package Blog\Template
  */
 class HtmlFragments
 {
-
-
     /**
      * @return string
      */
@@ -68,11 +67,25 @@ class HtmlFragments
         return $loginBox;
     }
 
-
+    /**
+     * @return string
+     */
     public static function footer()
     {
         $footer = '<footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright © Marko 2021 ;-)</p></div>
         </footer>';
+        return $footer;
+    }
+
+
+    /**
+     * @param $content [string]
+     * @return string
+     */
+    public static function wrapHtml($content)
+    {
+        $html = '<!DOCTYPE html><html lang="en">'.$content.'</html>';
+        return $html;
     }
 }
