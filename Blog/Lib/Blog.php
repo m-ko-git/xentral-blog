@@ -23,7 +23,7 @@ class Blog
         if(isset($_GET['action']) && $_GET['action'] != ''){
             switch(htmlspecialchars($_GET['action'])){
                 case 'login' : Frontpage::adminAction('login');break;
-                case 'logout': Frontpage::adminAction('logout');break;
+                case 'logout': Frontpage::listAction();break;
             }
         }else{
             Frontpage::listAction();

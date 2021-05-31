@@ -153,7 +153,7 @@ class HtmlFragments
             <div class="container">
                 <div class="text-center my-5">
                     <h1 class="fw-bolder">Xentral Blog Task</h1>
-                    <p class="lead mb-0">Let\'s see how it goes...</p>
+                    <p class="lead mb-0">Listview</p>
                 </div>
             </div>
         </header>';
