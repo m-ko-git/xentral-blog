@@ -51,7 +51,7 @@ class Frontpage
             $title = $row['title'];
             $date = date("F j, Y, g:i a",$row['tstamp']);
             $excerpt = preg_replace( '/[^ ]*$/', '', substr( $row['text'], 0, LENGTH ) ) . ' ...';
-            $allWrappedPosts .= View\HtmlFragments::wrapListPost($title, $excerpt, $date);
+            $allWrappedPosts .= View\HtmlFragments::wrapListPostAdmin($title, $excerpt, $date);
         }
         View\Adminview::showAdminView($allWrappedPosts);
     }
