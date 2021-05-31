@@ -55,11 +55,11 @@ class HtmlFragments
         $loginBox = '<div class="card mb-4">
                         <div class="card-header">Login</div>
                         <div class="card-body">
-                            <form action="index.php?action=login" method="POST">
+                            <form action="index.php?action=login" method="post">
                                 <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="Username" aria-label="Enter email">
-                                    <input class="form-control" type="text" placeholder="password" aria-label="Enter password">
-                                    <button class="btn btn-primary" id="button-search" type="submit">Submit</button>
+                                    <input class="form-control" type="text" placeholder="Username" aria-label="Enter email" name="user">
+                                    <input class="form-control" type="text" placeholder="password" aria-label="Enter password" name="pw">
+                                    <input class="btn btn-primary" id="button-search" type="submit">
                                 </div>
                             </form>
                         </div>

@@ -13,13 +13,22 @@ use Blog\Controller\Frontpage;
 class Blog
 {
 
+
     /**
-     * From here we start all our Blog Logic
-     * (one entry point only)
+     * Dependent on the action we will call the right controller function from here
+     * @param string $action
      */
-    public static function start()
+    public static function start($action='')
     {
-        Frontpage::listView();
+        if(isset($_GET['action']) && $_GET['action'] != ''){
+            switch(htmlspecialchars($_GET['action'])){
+                case 'login' : Frontpage::adminAction('login');break;
+                case 'logout': Frontpage::adminAction('logout');break;
+            }
+        }else{
+            Frontpage::listAction();
+        }
+
     }
 
 }
