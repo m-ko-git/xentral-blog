@@ -30,6 +30,24 @@ class HtmlFragments
     }
 
     /**
+     * @return string
+     */
+    public static function startHtmlAdmin(){
+        $head = '<head>
+                    <meta charset="utf-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                    <meta name="description" content="">
+                    <meta name="author" content="Marko Grasshoff">
+                    <title>Xentral Blog Task</title>
+                    <!-- Favicon-->
+                    <link rel="icon" type="image/x-icon" href="Blog/View/assets/favicon.ico">
+                    <!-- Core theme CSS (includes Bootstrap)-->
+                    <link href="Blog/View/css/styles.css" rel="stylesheet">
+                </head>';
+        return $head;
+    }
+
+    /**
      * Returns header of the Frontpage
      * @return string
      */
@@ -48,6 +66,7 @@ class HtmlFragments
     }
 
     /**
+     * Renders the loginBox
      * @return string
      */
     public static function loginBox()
@@ -69,6 +88,27 @@ class HtmlFragments
     }
 
     /**
+     * Renders the AdminMessage
+     * @return string
+     */
+    public static function loginBoxAdmin()
+    {
+        $loginBox = '<div class="card mb-4">
+                        <div class="card-header">Logout</div>
+                        <div class="card-body">
+                            <form action="index.php?action=logout" method="post">
+                                <div class="input-group">
+                                    <input class="btn btn-primary" id="button-search" type="submit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>';
+
+        return $loginBox;
+    }
+
+    /**
+     * Renders the footer
      * @return string
      */
     public static function footer()
@@ -103,12 +143,32 @@ class HtmlFragments
         return $body;
     }
 
+
+    /**
+     * Renders the pageHeader for ListView
+     * @return string
+     */
     public static function pageHeader(){
         return '<header class="py-1 bg-light border-bottom mb-4">
             <div class="container">
                 <div class="text-center my-5">
                     <h1 class="fw-bolder">Xentral Blog Task</h1>
                     <p class="lead mb-0">Let\'s see how it goes...</p>
+                </div>
+            </div>
+        </header>';
+    }
+
+    /**
+     * Renders the pageHeader for AdminView
+     * @return string
+     */
+    public static function pageHeaderAdmin(){
+        return '<header class="py-1 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Xentral Blog Task</h1>
+                    <p class="lead mb-0">Admin View</p>
                 </div>
             </div>
         </header>';
@@ -130,6 +190,26 @@ class HtmlFragments
                       <h2 class="card-title h4">'.$postTitle.'</h2>
                       <p class="card-text">'.$excerpt.'</p>
                       <a class="btn btn-primary" href="#!">Read more →</a>
+                      </div></div>';
+        return $post;
+    }
+
+    /**
+     * Wrap a post for the Admin
+     *
+     * @param $postTitle
+     * @param $excerpt
+     * @param $date
+     * @return string
+     */
+    public static function wrapListPostAdmin($postTitle, $excerpt, $date){
+
+        $post =  '    <div class="card mb-4">
+                      <div class="card-body">
+                      <div class="small text-muted">'.$date.'</div>
+                      <h2 class="card-title h4">'.$postTitle.'</h2>
+                      <p class="card-text">'.$excerpt.'</p>
+                      <a class="btn btn-primary" href="#!">Edit post →</a>
                       </div></div>';
         return $post;
     }

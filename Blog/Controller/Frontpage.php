@@ -16,13 +16,12 @@ class Frontpage
 {
     /*
      * Function listAction
-     * Renders the initial view, if nobody is logged in
+     * Triggers the initial view, if nobody is logged in
      * and no action was triggered
      */
     public static function listAction()
     {
         $allWrappedPosts='';    //all html wrapped posts
-        $header = View\HtmlFragments::headerHome();   //HTML Header of the frontpage template
         $postsSortedByDate = Model\Blogposts::getAllPosts();
         foreach($postsSortedByDate as $row){
             $title = $row['title'];
@@ -37,7 +36,7 @@ class Frontpage
 
     /**
      * Function adminAction
-     * checks if Admin wants to login or logout
+     * checks if Admin wants to login or logout and triggers the AdminView
      * @param string $action [can be login or logout]
      */
     public static function adminAction($action='')
@@ -47,7 +46,6 @@ class Frontpage
             if function result is TRUE, show AdminView with Login Status*/
         }
         $allWrappedPosts='';    //all html wrapped posts
-        $header = View\HtmlFragments::headerHome();   //HTML Header of the frontpage template
         $postsSortedByDate = Model\Blogposts::getAllPosts();
         foreach($postsSortedByDate as $row){
             $title = $row['title'];

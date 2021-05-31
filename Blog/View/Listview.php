@@ -11,7 +11,7 @@ class Listview
      */
 
     /**
-     * Listview constructor.
+     * Shows the initial Lisview
      */
     public static function showListView($posts)
     {

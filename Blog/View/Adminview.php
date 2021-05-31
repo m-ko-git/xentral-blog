@@ -8,11 +8,11 @@ class Adminview
 {
 
     /**
-     * Listview constructor.
+     * Shows the AdminView
      */
     public static function showAdminView($posts)
     {
-        $login = HtmlFragments::loginBox();
+        $login = HtmlFragments::loginBoxAdmin();
         $htmlOutput = '<div class="container">
             <div class="row">
                 <!-- Blog entries-->
@@ -44,15 +44,15 @@ class Adminview
                     
                     <!-- Side widget-->
                     <div class="card mb-4">
-                        <div class="card-header">Side Widget</div>
-                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                        <div class="card-header">ToDo\'s</div>
+                        <div class="card-body">Logincheck, Pagination, User administration, </div>
                     </div>
                 </div>
             </div>
         </div>';
 
-        $header = HtmlFragments::startHtml();
-        $pageHeader = HtmlFragments::pageHeader();
+        $header = HtmlFragments::startHtmlAdmin();
+        $pageHeader = HtmlFragments::pageHeaderAdmin();
         $bodyWrapped = HtmlFragments::wrapBody($pageHeader.$htmlOutput);
         $footer = HtmlFragments::footer();
         $htmlWrappedOutput = HtmlFragments::wrapHtml($header.$bodyWrapped.$footer);
