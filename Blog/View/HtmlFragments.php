@@ -35,7 +35,7 @@ class HtmlFragments
      */
     public static function headerHome()
     {
-        $header = "<header class=\"py-5 bg-light border-bottom mb-4\">
+        $header = "<header class=\"py-1 bg-light border-bottom mb-4\">
             <div class=\"container\">
                 <div class=\"text-center my-5\">
                     <h1 class=\"fw-bolder\">Welcome to Xentral Blog Excercise!</h1>
@@ -73,7 +73,7 @@ class HtmlFragments
      */
     public static function footer()
     {
-        $footer = '<footer class="py-5 bg-dark">
+        $footer = '<footer class="py-2 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright © Marko 2021 ;-)</p></div>
         </footer>';
         return $footer;
@@ -104,7 +104,7 @@ class HtmlFragments
     }
 
     public static function pageHeader(){
-        return '<header class="py-5 bg-light border-bottom mb-4">
+        return '<header class="py-1 bg-light border-bottom mb-4">
             <div class="container">
                 <div class="text-center my-5">
                     <h1 class="fw-bolder">Xentral Blog Task</h1>

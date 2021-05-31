@@ -1,1 +1,9 @@
-CREATE TABLE IF NOT EXISTS`db168495_5`.`blogposts` ( `uid` INT(10) NOT NULL AUTO_INCREMENT , `user_id` INT(10) NOT NULL , `deleted` INT(1) NOT NULL DEFAULT '0' , `tstamp` INT(10) NOT NULL DEFAULT '0' , `title` VARCHAR NOT NULL , `text` TEXT NOT NULL , `crdate` INT NOT NULL , PRIMARY KEY (`uid`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+CREATE TABLE `blogposts` (
+  `uid` int(10) NOT NULL,
+  `user_id` int(10) NOT NULL DEFAULT '0',
+  `deleted` int(1) NOT NULL DEFAULT '0',
+  `tstamp` int(10) NOT NULL DEFAULT '0',
+  `title` varchar(255) NOT NULL,
+  `text` text NOT NULL,
+  `crdate` int(100) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

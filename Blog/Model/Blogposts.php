@@ -7,7 +7,7 @@ define('DB_HOST', 'mysql5.jadedheart.de');
 define('DB_NAME', 'db168495_5');
 define('DB_USER', 'db168495_5');
 define('DB_PASS', 'Xentral2021!');
-define('LENGTH',(int)25);   //How many chars
+define('LENGTH',(int)100);   //How many chars in
 
 class Blogposts
 {
