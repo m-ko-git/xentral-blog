@@ -34,8 +34,18 @@ class Frontpage
 
     }
 
-    public static function adminAction()
+
+    /**
+     * Function adminAction
+     * checks if Admin wants to login or logout
+     * @param string $action [can be login or logout]
+     */
+    public static function adminAction($action='')
     {
+        if($action=='login'){
+            /*TODO: Implement function for loginCheck
+            if function result is TRUE, show AdminView with Login Status*/
+        }
         $allWrappedPosts='';    //all html wrapped posts
         $header = View\HtmlFragments::headerHome();   //HTML Header of the frontpage template
         $postsSortedByDate = Model\Blogposts::getAllPosts();
@@ -44,9 +54,8 @@ class Frontpage
             $date = date("F j, Y, g:i a",$row['tstamp']);
             $excerpt = preg_replace( '/[^ ]*$/', '', substr( $row['text'], 0, LENGTH ) ) . ' ...';
             $allWrappedPosts .= View\HtmlFragments::wrapListPost($title, $excerpt, $date);
-    }
-        View\Listview::showAdminView($allWrappedPosts);
-
+        }
+        View\Adminview::showAdminView($allWrappedPosts);
     }
 
 

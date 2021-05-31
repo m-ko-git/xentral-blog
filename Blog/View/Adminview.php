@@ -4,13 +4,13 @@
 namespace Blog\View;
 
 
-class Listview
+class Adminview
 {
 
     /**
      * Listview constructor.
      */
-    public static function showListView($posts)
+    public static function showAdminView($posts)
     {
         $login = HtmlFragments::loginBox();
         $htmlOutput = '<div class="container">

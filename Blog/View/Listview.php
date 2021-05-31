@@ -6,6 +6,9 @@ namespace Blog\View;
 
 class Listview
 {
+    /*
+     * TODO: Implement pagination
+     */
 
     /**
      * Listview constructor.
